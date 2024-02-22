@@ -9,11 +9,27 @@
 $(document).ready(function(){
     $("#loadDataBtn").click(function(){
         $.ajax({
-            url: "library.json", // URL del archivo JSON
+            url: "discos.json", // URL del archivo JSON
             type: "GET", // Método de solicitud
             dataType: "json", // Tipo de datos esperados en la respuesta
             success: function(data){ // Función que se ejecuta si la solicitud es exitosa
-                $("#result").html(JSON.stringify(data)); // Mostrar los datos en un elemento HTML
+                //$("#result").html(JSON.stringify(data)); // Mostrar los datos en un elemento HTML
+
+                // hacer cosas
+                let titulo = data.tienda.disco[0].titulo;
+                let autor = data.tienda.disco[0].autor;
+                let precio = data.tienda.disco[0].precio;
+                let id = data.tienda.disco[0].id;
+                let cancion1 = data.tienda.disco[0].canciones[0].cancion;
+                let cancion2 = data.tienda.disco[0].canciones[1].cancion;
+
+                $("#titulo").append(titulo);
+                $("#autor").append(autor);
+                $("#precio").append(precio);
+                //$("#parrafo").html(id);
+                $("#cancion1").html(cancion1);
+                $("#cancion2").html(cancion2);
+
             },
             error: function(jqXHR, textStatus, errorThrown){ // Función que se ejecuta si hay un error en la solicitud
                 console.log("Error: " + textStatus, errorThrown);
@@ -27,6 +43,17 @@ $(document).ready(function(){
 
 <button id="loadDataBtn">Cargar Datos</button>
 <div id="result"></div>
+<div id="parrafo"></div>
+    <ul>
+        <li id="titulo">Titulo: </li>
+        <li id="autor">Autor: </li>
+        <li id="precio">Precio: </li>
+        <li>Canciones: </li>
+        <ul>
+            <li id="cancion1"></li>
+            <li id="cancion2"></li>
+        </ul>
+    </ul>
 
 </body>
 </html>

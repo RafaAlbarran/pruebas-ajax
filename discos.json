@@ -1,0 +1,40 @@
+{
+  "tienda": {
+    "disco": [
+      {
+        "id": "_1",
+        "titulo": "Un verano sin tí",
+        "autor": "Bad Bunny",
+        "precio": 15,
+		"canciones": [
+			{"cancion": "Moscow Mule"},
+			{"cancion": "Después de la playa"},
+			{"cancion": "Me porto bonito"}
+		]			
+      },
+      {
+        "id": "_2",
+        "title": "Antes de Ameri",
+        "author": "Duki",
+        "year": 12,
+		"canciones": [
+			{"cancion": "1 de enero"},
+			{"cancion": "Jefes del sudoeste"},
+			{"cancion": "Rockstar 2.0"}
+		]
+      },
+      {
+        "id": "_3",
+        "title": "Recovery",
+        "author": "Eminem",
+        "year": 20,
+		"canciones": [
+			{"cancion": "Cold Wind Blows"},
+			{"cancion": "Talkin' 2 Myself"},
+			{"cancion": "On Fire"}
+		]
+      }
+    ]
+  }
+  
+}
